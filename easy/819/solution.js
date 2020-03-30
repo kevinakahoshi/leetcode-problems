@@ -28,3 +28,5 @@ const mostCommonWord = (paragraph, banned) => {
   }
   return word;
 };
+
+export default mostCommonWord;
