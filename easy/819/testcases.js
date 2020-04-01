@@ -78,7 +78,7 @@ const buildErrorSentence = (testCase, result, itemCount) => {
   const listOfBannedWords = document.createElement('p');
   let bannedWords = '';
 
-  mainHeading.innerText = `Failed Test Case ${itemCount}`;
+  mainHeading.innerText = `Failed Test Case ${itemCount + 1}`;
   testCasePTag.innerText = `Test Case: ${testCase[0]}`;
   expectedResult.innerText = `Expcted: ${testCase[2]}`;
   output.innerText = `Output: ${result}`;
