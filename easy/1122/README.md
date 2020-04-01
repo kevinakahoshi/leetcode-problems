@@ -14,3 +14,4 @@ Output:
 - output = [2,2,2,1,4,3,3,9,6,7,19]
 
 ### Demo
+![problem-1122](https://user-images.githubusercontent.com/53406674/78180047-0da1d180-7417-11ea-81a0-f09610386ec0.gif)
