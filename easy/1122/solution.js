@@ -2,7 +2,7 @@
 // @param {number[]} arr2
 // @return {number[]}
 
-const relativeSortArray = function (arr1, arr2) {
+const relativeSortArray = (arr1, arr2) => {
   const output = [];
   let arr1Copy = JSON.parse(JSON.stringify(arr1));
 
