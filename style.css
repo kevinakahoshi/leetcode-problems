@@ -9,6 +9,11 @@ body {
   box-sizing: border-box;
 }
 
+::-webkit-scrollbar-track,
+::-webkit-scrollbar-track-piece {
+  background: transparent;
+}
+
 main {
   width: 80%;
   margin: 0 auto;
@@ -44,6 +49,10 @@ button {
   background: #fff;
   border-radius: .5rem;
   box-shadow: 0 .25rem .25rem #00000030;
+}
+
+.overflow-x-scroll {
+  overflow: auto;
 }
 
 .all-good {
