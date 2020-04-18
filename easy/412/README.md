@@ -1,17 +1,32 @@
-# Problem 1: Two Sum
+# Problem 412: Fizz Buzz
 
-Given an array of integers, return indices of the two numbers such that they add up to a specific target.
+Write a program that outputs the string representation of numbers from 1 to n.
 
-You may assume that each input would have exactly one solution, and you may not use the same element twice.
+But for multiples of three it should output “Fizz” instead of the number and for the multiples of five output “Buzz”. For numbers which are multiples of both three and five output “FizzBuzz”.
 
 ### Example
 
 Input:
-- nums = [2, 7, 11, 15]
-- target = 9
+- n = 15
 
 Output:
-- output = [0, 1]
-Because nums[0] + nums[1] = 2 + 7 = 9,
+[
+  "1",
+  "2",
+  "Fizz",
+  "4",
+  "Buzz",
+  "Fizz",
+  "7",
+  "8",
+  "Fizz",
+  "Buzz",
+  "11",
+  "Fizz",
+  "13",
+  "14",
+  "FizzBuzz"
+]
 
 ### Demo
+![problem-412](https://user-images.githubusercontent.com/53406674/79644228-68983000-815c-11ea-9a26-009ed2295f64.gif)
