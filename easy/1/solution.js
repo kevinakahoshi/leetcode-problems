@@ -1,5 +1,5 @@
-// @param {number[]} arr1
-// @param {number[]} arr2
+// @param {number[]} nums
+// @param {number} target
 // @return {number[]}
 
 const twoSum = (nums, target) => {

@@ -1,6 +1,5 @@
-// @param {number[]} arr1
-// @param {number[]} arr2
-// @return {number[]}
+//  @param {number} n
+//  @return {string[]}
 
 const fizBuzz = (n) => {
   const output = [];
