@@ -15,3 +15,4 @@ Output:
 Because nums[0] + nums[1] = 2 + 7 = 9,
 
 ### Demo
+![problem-1](https://user-images.githubusercontent.com/53406674/79644393-9762d600-815d-11ea-91a5-acbd1c261daf.gif)
