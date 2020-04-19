@@ -105,7 +105,7 @@ const buildErrorSentence = (testCase, result, itemCount) => {
   mainHeading.innerText = `Failed Test Case ${itemCount + 1}`;
   arr1.innerText = `arr1: [${testCase[0]}]`;
   arr2.innerText = `arr2: [${testCase[1]}]`;
-  expectedResult.innerText = `Expcted: [${testCase[2]}]`;
+  expectedResult.innerText = `Expected: [${testCase[2]}]`;
   output.innerText = `Output: [${result}]`;
 
   containingDiv.append(mainHeading, arr1, arr2, expectedResult, output);

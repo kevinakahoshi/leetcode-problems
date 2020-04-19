@@ -1,20 +1,15 @@
 //  @param {number} n
-//  @return {string[]}
+//  @return {number}
 
-const fizBuzz = (n) => {
-  const output = [];
-  for (let index = 1; index <= n; index++) {
-    if (index % 15 === 0) {
-      output.push('FizzBuzz');
-    } else if (index % 3 === 0) {
-      output.push('Fizz');
-    } else if (index % 5 === 0) {
-      output.push('Buzz');
-    } else {
-      output.push(index.toString());
-    }
+const arrangeCoins = (n) => {
+  let coinsPerRow = 1;
+
+  while (coinsPerRow <= n) {
+    n = n - coinsPerRow;
+    coinsPerRow++;
   }
-  return output;
+
+  return coinsPerRow - 1;
 };
 
-export default fizBuzz;
+export default arrangeCoins;
