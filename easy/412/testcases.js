@@ -53,8 +53,8 @@ const buildErrorSentence = (testCase, result, itemCount) => {
   const output = document.createElement('p');
 
   mainHeading.innerText = `Failed Test Case ${itemCount + 1}`;
-  input.innerText = `input: ${testCase[0]}`;
-  expectedResultHeading.innerText = 'Expcted: '
+  input.innerText = `Input: ${testCase[0]}`;
+  expectedResultHeading.innerText = 'Expected: '
   expectedResult.innerText = `[${testCase[1]}]`;
   outputHeading.innerText = 'Output: '
   output.innerText = `[${result}]`;
