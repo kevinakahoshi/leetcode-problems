@@ -17,10 +17,16 @@ const results = {
 }
 
 const testCases = [
-  [
-    5,
-    2
-  ]
+  [5, 2],
+  [8, 3],
+  [10, 4],
+  [300, 24],
+  [1, 1],
+  [55287, 332],
+  [2873, 75],
+  [97, 13],
+  [0, 0],
+  [999999999, 44720]
 ];
 
 const buildErrorSentence = (testCase, result, itemCount) => {

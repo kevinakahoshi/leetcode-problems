@@ -1,32 +1,32 @@
-# Problem 412: Fizz Buzz
+# Problem 441: Arranging Coins
 
-Write a program that outputs the string representation of numbers from 1 to n.
+You have a total of n coins that you want to form in a staircase shape, where every k-th row must have exactly k coins.
 
-But for multiples of three it should output “Fizz” instead of the number and for the multiples of five output “Buzz”. For numbers which are multiples of both three and five output “FizzBuzz”.
+Given n, find the total number of full staircase rows that can be formed.
 
-### Example
+n is a non-negative integer and fits within the range of a 32-bit signed integer.
 
-Input:
-- n = 15
+### Example 1
 
-Output:
-[
-  "1",
-  "2",
-  "Fizz",
-  "4",
-  "Buzz",
-  "Fizz",
-  "7",
-  "8",
-  "Fizz",
-  "Buzz",
-  "11",
-  "Fizz",
-  "13",
-  "14",
-  "FizzBuzz"
-]
+n = 5
+
+The coins can form the following rows:
+¤
+¤ ¤
+¤ ¤
+
+Because the 3rd row is incomplete, we return 2.
+
+### Example 2
+
+n = 8
+
+The coins can form the following rows:
+¤
+¤ ¤
+¤ ¤ ¤
+¤ ¤
+
+Because the 4th row is incomplete, we return 3.
 
 ### Demo
-![problem-412](https://user-images.githubusercontent.com/53406674/79644228-68983000-815c-11ea-9a26-009ed2295f64.gif)
