@@ -19,12 +19,24 @@ const results = {
 const testCases = [
   [
     [1, 0, 1], 5
+  ],
+  [
+    [0], 0
+  ],
+  [
+    [1], 1
+  ],
+  [
+    [1, 0, 0, 1, 0, 0, 1, 1, 1, 0, 0, 0, 0, 0, 0], 18880
+  ],
+  [
+    [0, 0], 0
   ]
 ];
 
 class Node {
-  constructor() {
-    this.value = null;
+  constructor(value) {
+    this.value = value;
     this.next = null;
   }
 }
@@ -35,21 +47,23 @@ const buildErrorSentence = (testCase, result, itemCount) => {
   const input = document.createElement('p');
   const expectedResult = document.createElement('p');
   const output = document.createElement('p');
+
   mainHeading.innerText = `Failed Test Case ${itemCount + 1}`;
   input.innerText = `Input: head = [${testCase[0]}]`;
   expectedResult.innerText = `Expected: ${testCase[1]}`;
   output.innerText = `Output: ${result}`;
+
   containingDiv.append(mainHeading, input, expectedResult, output);
-  containingDiv.classList.add('error-box')
+  containingDiv.classList.add('error-box');
+
   main.append(containingDiv);
 }
 
 const createLinkedList = headArray => {
-  const head = new Node();
+  const head = new Node(headArray[0]);
   let currentNode = head;
   let counter = 0;
   while (currentNode) {
-    currentNode.value = headArray[counter];
     if (typeof headArray[counter + 1] === 'number') {
       currentNode.next = new Node(headArray[counter + 1]);
     }
@@ -62,7 +76,7 @@ const createLinkedList = headArray => {
 startButton.addEventListener('click', () => {
   const delayTest = setInterval(() => {
     if (counter < testCases.length) {
-      const head = createLinkedList(testCases[counter][0])
+      const head = createLinkedList(testCases[counter][0]);
       const result = getDecimalValue(head);
       if (result === testCases[counter][1]) {
         if (!body.classList.contains('all-good') && !body.classList.contains('errors')) {
@@ -77,7 +91,7 @@ startButton.addEventListener('click', () => {
           body.classList.add('errors');
         }
         results.failed++;
-        buildErrorSentence(testCases[counter], result, counter)
+        buildErrorSentence(testCases[counter], result, counter);
       }
       counter++;
     } else {
