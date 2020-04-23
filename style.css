@@ -19,7 +19,14 @@ main {
   margin: 0 auto;
 }
 
-pre {
+code {
+  background-color: #f7f9fa;
+  border-radius: 3px;
+  padding: 4px;
+  color: #546e7a;
+}
+
+pre.code-block {
   background: #222;
   padding: 1rem;
   width: fit-content;

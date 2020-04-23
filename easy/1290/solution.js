@@ -10,10 +10,10 @@ const getDecimalValue = head => {
   let binaryString = '';
   let currentNode = head;
   while (currentNode) {
-    binaryString += currentNode.val;
+    binaryString += currentNode.value;
     currentNode = currentNode.next;
   }
   return parseInt(binaryString, 2)
 };
 
-export default relativeSortArray;
+export default getDecimalValue;

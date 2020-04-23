@@ -1,4 +1,4 @@
-import relativeSortArray from './solution.js';
+import getDecimalValue from './solution.js';
 
 const body = document.querySelector('body');
 const startButton = document.querySelector('button');
@@ -18,106 +18,53 @@ const results = {
 
 const testCases = [
   [
-    [2, 3, 1, 3, 2, 4, 6, 7, 9, 2, 19],
-    [2, 1, 4, 3, 9, 6],
-    [2, 2, 2, 1, 4, 3, 3, 9, 6, 7, 19]
-  ],
-  [
-    [8, 10, 9, 27, 27, 11, 2, 5, 9, 2, 19],
-    [10, 8, 2, 9, 11, 27],
-    [10, 8, 2, 2, 9, 9, 11, 27, 27, 5, 19]
-  ],
-  [
-    [2, 3, 1, 3, 2, 4, 6, 7, 9, 2, 19],
-    [2, 1, 4, 3, 9, 6],
-    [2, 2, 2, 1, 4, 3, 3, 9, 6, 7, 19]
-  ],
-  [
-    [2, 3, 1, 3, 2, 4, 6, 7, 9, 2, 19],
-    [2, 1, 4, 3, 9, 6],
-    [2, 2, 2, 1, 4, 3, 3, 9, 6, 7, 19]
-  ],
-  [
-    [2, 3, 1, 3, 2, 4, 6, 7, 9, 2, 19],
-    [2, 1, 4, 3, 9, 6],
-    [2, 2, 2, 1, 4, 3, 3, 9, 6, 7, 19]
-  ],
-  [
-    [2, 3, 1, 3, 2, 4, 6, 7, 9, 2, 19],
-    [2, 1, 4, 3, 9, 6],
-    [2, 2, 2, 1, 4, 3, 3, 9, 6, 7, 19]
-  ],
-  [
-    [2, 3, 1, 3, 2, 4, 6, 7, 9, 2, 19],
-    [2, 1, 4, 3, 9, 6],
-    [2, 2, 2, 1, 4, 3, 3, 9, 6, 7, 19]
-  ],
-  [
-    [2, 3, 1, 3, 2, 4, 6, 7, 9, 2, 19],
-    [2, 1, 4, 3, 9, 6],
-    [2, 2, 2, 1, 4, 3, 3, 9, 6, 7, 19]
-  ],
-  [
-    [2, 3, 1, 3, 2, 4, 6, 7, 9, 2, 19],
-    [2, 1, 4, 3, 9, 6],
-    [2, 2, 2, 1, 4, 3, 3, 9, 6, 7, 19]
-  ],
-  [
-    [2, 3, 1, 3, 2, 4, 6, 7, 9, 2, 19],
-    [2, 1, 4, 3, 9, 6],
-    [2, 2, 2, 1, 4, 3, 3, 9, 6, 7, 19]
-  ],
-  [
-    [2, 3, 1, 3, 2, 4, 6, 7, 9, 2, 19],
-    [2, 1, 4, 3, 9, 6],
-    [2, 2, 2, 1, 4, 3, 3, 9, 6, 7, 19]
-  ],
-  [
-    [2, 3, 1, 3, 2, 4, 6, 7, 9, 2, 19],
-    [2, 1, 4, 3, 9, 6],
-    [2, 2, 2, 1, 4, 3, 3, 9, 6, 7, 19]
-  ],
-  [
-    [2, 3, 1, 3, 2, 4, 6, 7, 9, 2, 19],
-    [2, 1, 4, 3, 9, 6],
-    [2, 2, 2, 1, 4, 3, 3, 9, 6, 7, 19]
-  ],
-  [
-    [2, 3, 1, 3, 2, 4, 6, 7, 9, 2, 19],
-    [2, 1, 4, 3, 9, 6],
-    [2, 2, 2, 1, 4, 3, 3, 9, 6, 7, 19]
-  ],
-  [
-    [2, 3, 1, 3, 2, 4, 6, 7, 9, 2, 19],
-    [2, 1, 4, 3, 9, 6],
-    [2, 2, 2, 1, 4, 3, 3, 9, 6, 7, 19]
+    [1, 0, 1], 5
   ]
 ];
+
+class Node {
+  constructor() {
+    this.value = null;
+    this.next = null;
+  }
+}
 
 const buildErrorSentence = (testCase, result, itemCount) => {
   const containingDiv = document.createElement('div');
   const mainHeading = document.createElement('h3');
-  const arr1 = document.createElement('p');
-  const arr2 = document.createElement('p');
+  const input = document.createElement('p');
   const expectedResult = document.createElement('p');
   const output = document.createElement('p');
-
   mainHeading.innerText = `Failed Test Case ${itemCount + 1}`;
-  arr1.innerText = `arr1: [${testCase[0]}]`;
-  arr2.innerText = `arr2: [${testCase[1]}]`;
-  expectedResult.innerText = `Expected: [${testCase[2]}]`;
-  output.innerText = `Output: [${result}]`;
-
-  containingDiv.append(mainHeading, arr1, arr2, expectedResult, output);
+  input.innerText = `Input: head = [${testCase[0]}]`;
+  expectedResult.innerText = `Expected: ${testCase[1]}`;
+  output.innerText = `Output: ${result}`;
+  containingDiv.append(mainHeading, input, expectedResult, output);
   containingDiv.classList.add('error-box')
   main.append(containingDiv);
+}
+
+const createLinkedList = headArray => {
+  const head = new Node();
+  let currentNode = head;
+  let counter = 0;
+  while (currentNode) {
+    currentNode.value = headArray[counter];
+    if (typeof headArray[counter + 1] === 'number') {
+      currentNode.next = new Node(headArray[counter + 1]);
+    }
+    currentNode = currentNode.next;
+    counter++;
+  }
+  return head;
 }
 
 startButton.addEventListener('click', () => {
   const delayTest = setInterval(() => {
     if (counter < testCases.length) {
-      const result = relativeSortArray(testCases[counter][0], testCases[counter][1]);
-      if (result.toString() === testCases[counter][2].toString()) {
+      const head = createLinkedList(testCases[counter][0])
+      const result = getDecimalValue(head);
+      if (result === testCases[counter][1]) {
         if (!body.classList.contains('all-good') && !body.classList.contains('errors')) {
           body.classList.add('all-good');
         }
