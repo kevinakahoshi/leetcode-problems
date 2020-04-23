@@ -1,6 +1,6 @@
 // Definition for singly-linked list.
-// function ListNode(val) {
-//   this.val = val;
+// function ListNode(value) {
+//   this.value = value;
 //   this.next = null;
 // }
 // @param {ListNode} head
