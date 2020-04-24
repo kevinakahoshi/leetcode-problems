@@ -1,17 +1,34 @@
-# Problem 1122: Relative Sort Array
+# Problem 1290: Convert Binary Number in a Linked List to Integer
 
-Given two arrays arr1 and arr2, the elements of arr2 are distinct, and all elements in arr2 are also in arr1.
+Given head which is a reference node to a singly-linked list. The value of each node in the linked list is either or 1. The linked list holds the binary representation of a number.
 
-Sort the elements of arr1 such that the relative ordering of items in arr1 are the same as in arr2.  Elements that don't appear in arr2 should be placed at the end of arr1 in ascending order.
+Return the decimal value of the number in the linked list.
 
-### Example
+### Example 1:
 
-Input:
-- arr1 = [2,3,1,3,2,4,6,7,9,2,19]
-- arr2 = [2,1,4,3,9,6]
+Input: head = [1,0,1]
+Output: 5
 
-Output:
-- output = [2,2,2,1,4,3,3,9,6,7,19]
+Explanation: Output = (101) in base 2 = (5) in base 10
+
+### Example 2:
+
+Input: head = [0]
+Output: 0
+
+### Example 3:
+
+Input: head = [1]
+Output: 1
+
+### Example 4:
+
+Input: head = [1,0,0,1,0,0,1,1,1,0,0,0,0,0,0]
+Output: 18880
+
+### Example 5:
+
+Input: head = [0,0]
+Output: 0
 
 ### Demo
-![problem-1122](https://user-images.githubusercontent.com/53406674/78180047-0da1d180-7417-11ea-81a0-f09610386ec0.gif)
