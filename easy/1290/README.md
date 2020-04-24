@@ -32,3 +32,4 @@ Input: head = [0,0]
 Output: 0
 
 ### Demo
+![problem-1290](https://user-images.githubusercontent.com/53406674/80250408-a13a7c80-8628-11ea-9d2e-4bb256a928fa.gif)
