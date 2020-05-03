@@ -1,4 +1,4 @@
-# Problem 832: Most Common Word
+# Problem 832: Flipping an Image
 
 Given a binary matrix A, we want to flip the image horizontally, then invert it, and return the resulting image.
 
@@ -21,3 +21,4 @@ First reverse each row: [[0,0,1,1],[1,0,0,1],[1,1,1,0],[0,1,0,1]].
 Then invert the image: [[1,1,0,0],[0,1,1,0],[0,0,0,1],[1,0,1,0]]
 
 ### Demo
+![problem-832](https://user-images.githubusercontent.com/53406674/80895696-81483000-8c9c-11ea-9448-a7e3c3599702.gif)
