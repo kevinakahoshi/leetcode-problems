@@ -12,28 +12,27 @@
     <h1>Problem 832: Flipping an Image</h1>
     <h2>Description:</h2>
     <p>
-      Given a paragraph and a list of banned words, return the most frequent word that is not in the list of banned words.
-      It is guaranteed there is at least one word that isn't banned, and that the answer is unique.
+      Given a binary matrix <code>A</code>, we want to flip the image horizontally, then invert it, and return the
+      resulting image.
     </p>
     <p>
-      Words in the list of banned words are given in lowercase, and free of punctuation. Words in the paragraph are not case sensitive.
-      The answer is in lowercase.
+      To flip an image horizontally means that each row of the image is reversed. For example, flipping <code>[1, 1,
+        0]</code> horizontally results in <code>[0, 1, 1]</code>.
     </p>
     <p>
-      <strong>Example:</strong>
-    </p>
-    <pre>Input:<br/>Paragraph = "Bob hit a ball, the hit BALL flew far after it was hit."<br/>Banned = ["hit"]<br />Output: "ball"</pre>
-    <p>
-      <strong>Explanation:</strong><br />
+      To invert an image means that each <code>0</code> is replaced by <code>1</code>, and each <code>1</code> is replaced by <code>0</code>. For example, inverting <code>[0, 1,
+      1]</code> results in <code>[1, 0, 0]</code>.
     </p>
     <p>
-      "hit" occurs 3 times, but it is a banned word.
-      "ball" occurs twice (and no other word does), so it is the most frequent non-banned word in the paragraph.
+      <strong>Example 1:</strong>
     </p>
+    <pre
+      class="code-block">Input: [[1,1,0],[1,0,1],[0,0,0]]<br/>Output: [[1,0,0],[0,1,0],[1,1,1]]<br />Explanation: First reverse each row: [[0,1,1],[1,0,1],[0,0,0]].<br />Then, invert the image: [[1,0,0],[0,1,0],[1,1,1]]</pre>
     <p>
-      Note that words in the paragraph are not case sensitive, that punctuation is ignored (even if adjacent to words,
-      such as "ball,"), and that "hit" isn't the answer even though it occurs more because it is banned.
+      <strong>Example 2:</strong>
     </p>
+    <pre
+      class="code-block">Input: [[1,1,0,0],[1,0,0,1],[0,1,1,1],[1,0,1,0]]<br/>Output: [[1,1,0,0],[0,1,1,0],[0,0,0,1],[1,0,1,0]]<br />First reverse each row: [[0,0,1,1],[1,0,0,1],[1,1,1,0],[0,1,0,1]].<br />Then invert the image: [[1,1,0,0],[0,1,1,0],[0,0,0,1],[1,0,1,0]]</pre>
     <button>Start Test</button>
   </main>
 </body>
