@@ -37,3 +37,4 @@ Explanation: It is better not to apply any change.
 - num's digits are 6 or 9.
 
 ### Demo
+![problem-1323](https://user-images.githubusercontent.com/53406674/81884459-d6156180-954c-11ea-90cd-81c8d9513fd0.gif)
