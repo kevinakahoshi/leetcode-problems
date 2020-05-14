@@ -1,35 +1,39 @@
 # Problem 1323: Convert Binary Number in a Linked List to Integer
 
-Given head which is a reference node to a singly-linked list. The value of each node in the linked list is either or 1. The linked list holds the binary representation of a number.
-
-Return the decimal value of the number in the linked list.
+Given a positive integer `num` consisting only of digits 6 and 9.
+Return the maximum number you can get by changing at most one digit (6 becomes 9, and 9 becomes 6).
 
 ### Example 1:
 
-Input: head = [1,0,1]
-Output: 5
-
-Explanation: Output = (101) in base 2 = (5) in base 10
+```
+Input: num = 9669
+Output: 9969
+Explanation:
+Changing the first digit results in 6669.
+Changing the second digit results in 9969.
+Changing the third digit results in 9699.
+Changing the fourth digit results in 9666.
+The maximum number is 9969.
+```
 
 ### Example 2:
 
-Input: head = [0]
-Output: 0
+```
+Input: num = 9996
+Output: 9999
+Explanation: Changing the last digit 6 to 9 results in the maximum number.
+```
 
 ### Example 3:
 
-Input: head = [1]
-Output: 1
+```
+Input: num = 9999
+Output: 9999
+Explanation: It is better not to apply any change.
+```
 
-### Example 4:
-
-Input: head = [1,0,0,1,0,0,1,1,1,0,0,0,0,0,0]
-Output: 18880
-
-### Example 5:
-
-Input: head = [0,0]
-Output: 0
+### Constraints
+- 1 <= num <= 10^4
+- num's digits are 6 or 9.
 
 ### Demo
-![problem-1290](https://user-images.githubusercontent.com/53406674/80250408-a13a7c80-8628-11ea-9d2e-4bb256a928fa.gif)
