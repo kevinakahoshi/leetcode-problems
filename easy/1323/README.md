@@ -1,4 +1,4 @@
-# Problem 1323: Convert Binary Number in a Linked List to Integer
+# Problem 1323: Maximum 69 Number
 
 Given a positive integer `num` consisting only of digits 6 and 9.
 Return the maximum number you can get by changing at most one digit (6 becomes 9, and 9 becomes 6).
@@ -37,3 +37,4 @@ Explanation: It is better not to apply any change.
 - num's digits are 6 or 9.
 
 ### Demo
+![problem-1323](https://user-images.githubusercontent.com/53406674/81884459-d6156180-954c-11ea-90cd-81c8d9513fd0.gif)
