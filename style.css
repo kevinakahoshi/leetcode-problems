@@ -34,6 +34,10 @@ pre.code-block {
   color: #fff;
 }
 
+li {
+  margin-bottom: .5rem;
+}
+
 button {
   font-family: 'Source Code Pro', monospace;
   padding: 1rem 3rem;
