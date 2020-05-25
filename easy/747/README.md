@@ -28,4 +28,4 @@ Note:
 - Every `nums[i]` will be an integer in the range `[0, 99]`.
 
 ### Demo
-![problem-367](./problem-747.gif)
+![problem-747](./problem-747.gif)
