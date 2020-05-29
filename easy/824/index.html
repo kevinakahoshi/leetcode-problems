@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Problem 824</title>
+  <script src="testcases.js" type="module" defer></script>
+  <link rel="stylesheet" href="../../style.css">
+</head>
+<body>
+  <main class="smooth-transition">
+    <h1>Problem 824: Goat Latin</h1>
+    <h2>Description:</h2>
+    <p>
+      A sentence <code>S</code> is given, composed of words separated by spaces. Each word consists of lowercase and
+      uppercase
+      letters only.
+    </p>
+    <p>
+      We would like to convert the sentence to <em>"Goat Latin"</em> (a made-up language similar to Pig Latin.)
+    </p>
+    <p>
+      The rules of Goat Latin are as follows:
+      <ul>
+        <li>
+          If a word begins with a vowel (a, e, i, o, or u), append <code>"ma"</code> to the end of the word.
+          For example, the word 'apple' becomes 'applema'.
+        </li>
+        <li>
+          If a word begins with a consonant (i.e. not a vowel), remove the first letter and append it to the end, then
+          add <code>"ma"</code>. For example, the word <code>"goat"</code> becomes <code>"oatgma"</code>.
+        </li>
+        <li>
+          Add one letter <code>"a"</code> to the end of each word per its word index in the sentence, starting with 1.
+          For example, the first word gets <code>"a"</code> added to the end, the second word gets <code>"aa"</code>
+          added to the end and so on.
+        </li>
+      </ul>
+    </p>
+    <p>
+      Return the final sentence representing the conversion from <code>S</code> to Goat Latin.
+    </p>
+    <p>
+      <strong>Example 1:</strong>
+    </p>
+    <pre
+      class="code-block">Input: "I speak Goat Latin"<br />Output: "Imaa peaksmaaa oatGmaaaa atinLmaaaaa"</pre>
+    <p>
+      <strong>Example 2:</strong>
+    </p>
+    <pre
+      class="code-block">Input: "The quick brown fox jumped over the lazy dog"<br />Output: "heTmaa uickqmaaa rownbmaaaa oxfmaaaaa umpedjmaaaaaa overmaaaaaaa hetmaaaaaaaa azylmaaaaaaaaa ogdmaaaaaaaaaa"</pre>
+    <p>
+      <strong>Notes:</strong>
+      <ul>
+        <li>
+          <code>S</code> contains only uppercase, lowercase and spaces. Exactly one space between each word.
+        </li>
+        <li>
+          <code>1 <= S.length <=150</code>.
+        </li>
+      </ul>
+    </p>
+    <button>Start Test</button>
+  </main>
+</body>
+</html>
