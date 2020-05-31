@@ -12,11 +12,11 @@ Return True if `n` is a happy number, and False if not.
 Input: 19
 Output: true
 Explanation:
-1<sup>2</sup> + 9<sup>2</sup> = 82
-8<sup>2</sup> + 2<sup>2</sup> = 68
-6<sup>2</sup> + 8<sup>2</sup> = 100
-1<sup>2</sup> + 0<sup>2</sup> + 0<sup>2</sup> = 1
+1^2 + 9^2 = 82
+8^2 + 2^2 = 68
+6^2 + 8^2 = 100
+1^2 + 0^2 + 0^2 = 1
 ```
 
 ## Demo
-<!-- ![problem-917\](./problem-917.gif) -->
+![problem-202](./problem-202.gif)

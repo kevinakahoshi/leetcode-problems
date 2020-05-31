@@ -17,7 +17,26 @@ const results = {
 }
 
 const testCases = [
-  [19, true]
+  [19, true],
+  [20, false],
+  [100, true],
+  [1, true],
+  [20394, false],
+  [89, false],
+  [97583774893, true],
+  [101, false],
+  [8484, false],
+  [99, false],
+  [5763, false],
+  [73652, false],
+  [88888, true],
+  [1100, false],
+  [47265, true],
+  [10, true],
+  [55555555, false],
+  [8736, false],
+  [765723, false],
+  [900, false]
 ];
 
 const buildErrorSentence = (testCase, result, itemCount) => {
