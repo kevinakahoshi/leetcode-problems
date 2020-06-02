@@ -1,4 +1,4 @@
-# Problem 202: Happy Number
+# Problem 217: Contains Duplicate
 
 Given an array of integers, find if the array contains any duplicates.
 
