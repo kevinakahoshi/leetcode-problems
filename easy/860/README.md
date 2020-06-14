@@ -54,4 +54,4 @@ Since not every customer received correct change, the answer is false.
 
 ## Demo
 
-![problem-771](./problem-771.gif)
+![problem-771](./problem-860.gif)
