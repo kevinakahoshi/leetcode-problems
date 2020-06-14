@@ -28,6 +28,24 @@ const testCases = [
   ],
   [
     [5, 5, 10, 10, 20], false
+  ],
+  [
+    [5, 5, 5, 5, 5], true
+  ],
+  [
+    [5, 5, 5, 5, 10], true
+  ],
+  [
+    [10, 20], false
+  ],
+  [
+    [10, 20, 5, 5, 5, 10, 20, 20, 5, 10, 10, 5, 5, 5, 5, 10, 20, 5], false
+  ],
+  [
+    [5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5], true
+  ],
+  [
+    [5, 10, 20, 10, 5], false
   ]
 ];
 
@@ -39,7 +57,7 @@ const buildErrorSentence = (testCase, result, itemCount) => {
   const output = document.createElement('p');
 
   mainHeading.innerText = `Failed Test Case ${itemCount + 1}`;
-  testCasePTag.innerText = `Input: ${testCase[0]}`;
+  testCasePTag.innerText = `Input: [${testCase[0]}]`;
   expectedResult.innerText = `Expected: ${testCase[1]}`;
   output.innerText = `Output: ${result}`;
 
