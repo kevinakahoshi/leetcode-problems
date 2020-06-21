@@ -39,4 +39,4 @@ Output: [true,false,true]
 
 ## Demo
 
-![problem-1480](./problem-1480.gif)
+![problem-1431](./problem-1431.gif)
