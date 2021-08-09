@@ -1,0 +1,23 @@
+{
+  "name": "leetcode-problems",
+  "version": "1.0.0",
+  "description": "leetcode problems and solutions",
+  "main": "index.js",
+  "dependencies": {
+    "jest": "^27.0.6"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "jest --verbose"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/kevinakahoshi/leetcode-problems.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/kevinakahoshi/leetcode-problems/issues"
+  },
+  "homepage": "https://github.com/kevinakahoshi/leetcode-problems#readme"
+}
