@@ -7,7 +7,7 @@ const {
   findMin
 } = require('./solution');
 
-describe('Find Lowest Number in Sorted Array Shifted `n` Times', () => {
+describe('Problam 153: Find Lowest Number in Sorted Array Shifted `n` Times', () => {
   test('Test 1: All numbers are the same', () => {
     const nums = [1, 1, 1, 1, 1, 1, 1];
     const expectedOutput = 1;
